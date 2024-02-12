@@ -1,0 +1,139 @@
+﻿
+            //DbVisitEntities db = new DbVisitEntities();
+
+            //void PersonListele()
+            //{
+            //    var values = db.TblPerson.ToList();
+            //    foreach (var item in values)
+            //    {
+            //        Console.WriteLine(item.Id + " - " + item.Name + " - " + item.City + " - " + item.Job);
+            //        Console.WriteLine("**********************************************");
+            //    }
+            //}
+
+            //void CountryListele()
+            //{
+            //    var values = db.TblCountry.ToList();
+            //    foreach (var item in values)
+            //    {
+            //        Console.WriteLine(item.Id + " - " + item.CountryName + " - " + item.CountryCapital);
+            //        Console.WriteLine("**********************************************");
+            //    }
+            //}
+
+
+            //TblPerson TP = new TblPerson();
+            //TP.City = "İzmir";
+            //TP.Name = "Vedat Yıldırım";
+
+            //db.TblPerson.Add(TP);
+            //db.SaveChanges(); // Hata vermesinin sebebi Primary key olmamasından kaynaklıdır.
+
+            //PersonListele();
+
+            //TblCountry TC = new TblCountry();
+            //TC.CountryName = "İspanya";
+            //TC.CountryCapital = "Madrid";
+
+            //db.TblCountry.Add(TC);
+            //db.SaveChanges();
+
+            //CountryListele();
+
+            // ************* Silme İşlemi *************
+
+            //Console.Write("Silinecek değeri girin:");
+            //int countryId = Convert.ToInt32(Console.ReadLine());
+
+            //TblCountry TC = new TblCountry();
+            //var value = db.TblCountry.Find(countryId);
+
+            //db.TblCountry.Remove(value);
+            //db.SaveChanges();
+
+            //CountryListele();
+
+            // ************* Silme İşlemi *************
+
+
+            // ************* Update İşlemi *************
+
+            //var value = db.TblPerson.Find(1);
+            //value.Job = "Sofware Engineer";
+            //db.SaveChanges();
+
+            //PersonListele();
+            //Console.ReadLine();
+
+            // ************* Update İşlemi *************
+
+            // ************* Arama İşlemi *************
+
+            //var values2 = db.TblCountry.Where(x =>x.CountryName == "Türkiye").ToList();
+
+            //foreach (var item in values2)
+            //{
+            //    Console.WriteLine(item.Id + " - " + item.CountryCapital);
+            //    Console.WriteLine("************************************");
+            //}
+            //Console.ReadLine();
+
+            //Console.Write("Uçuş bilgisini öğrenmek istediğiniz ülkeyi girin: ");
+            //string ulke = Console.ReadLine();  
+
+            //var values3 = db.FlightDetails.Where(x => x.DepartureLocation == ulke && x.Price > 500).ToList();
+
+            //foreach (var item in values3)
+            //{
+            //    Console.WriteLine("Varış Noktası: " + item.ArrivalLocation + " Kapasitesi: " + item.Capacity + " Ücreti: " + item.Price + " Uçuş Tarihi: " + item.FlightDate);
+            //}
+
+            //Console.ReadLine();
+            // ************* Arama İşlemi *************
+
+
+            // ************* İstatistik İşlemi *************
+
+            //var value = db.TblPerson.Count();
+            //Console.WriteLine("Toplam kişi sayısı: "+ value);
+
+            //var value2 = db.FlightDetails.Average(x => x.Price);
+            //Console.WriteLine("Ortalama Fiyat Değeri:" + value2);
+
+
+            //// 52. Ders Odev Eğer tamamen satış yapılırsa toplam kazancı getiren kod.
+            //var values3 = db.FlightDetails.ToList();
+            //int ToplamSatis = 0;
+            //foreach (var item in values3)
+            //{
+            //    ToplamSatis = Convert.ToInt32(item.Price * item.Capacity) + ToplamSatis; 
+
+            //}
+            //Console.WriteLine("Toplam Satış: " + ToplamSatis);
+
+
+            //var values4 = db.FlightDetails.Sum(x => x.Price * x.Capacity);
+            //Console.WriteLine("Toplam Satış: " + values4);
+
+            //Console.ReadLine();
+
+            // ************* İstatistik İşlemi *************
+
+
+            // ************* Alt Sorgu İşlemi *************
+
+            //var value5 = db.TblCountry.Where(x => x.CountryName == "Türkiye").Select(y => y.Id).FirstOrDefault();
+
+            //var value6 = db.TblFlight.Where(x => x.DepartureLocation == value5).ToList();
+
+            //Console.WriteLine(value5);
+
+            //foreach (var item in value6)
+            //{
+            //    Console.WriteLine(item.Id + " " + item.Price + " " + item.DepartureLocation);
+            //}
+
+            
+
+            //Console.ReadLine();
+            // ************* Alt Sorgu İşlemi *************

@@ -1,0 +1,51 @@
+﻿            //Sınıflar
+
+            //Sınıf_Adı nesne_adı = new Sınıf_adı();
+
+            
+
+            Country c = new Country();
+            Visitor v = new Visitor();
+
+            void countryDetails()
+            {
+                Console.WriteLine(c.CountryID);
+                Console.WriteLine(c.Name);
+                Console.WriteLine(c.Capital);
+                Console.WriteLine("- - - - - - -");
+            }
+
+            void bilgiler()
+            {
+                Console.WriteLine(v.Id);
+                Console.WriteLine(v.Name);
+                Console.WriteLine(v.City);
+                Console.WriteLine("- - - - - - -");
+            }
+
+            c.CountryID = 1;    
+            c.Name = "Ukrayna";
+            c.Capital = "Kiev";
+
+            countryDetails();
+
+            c.CountryID = 2;
+            c.Name = "Türkiye";
+            c.Capital = "Ankara";
+
+            countryDetails();
+
+            v.Id = 1;
+            v.Name = "Ozan";
+            v.City = "Türkiye";
+
+            
+            v.mesaj("Merhaba");
+            bilgiler();
+
+            v.Id = 2;
+            v.Name = "George";
+            v.City = "Los Angelas";
+            
+            v.mesaj("Hello");
+            bilgiler();

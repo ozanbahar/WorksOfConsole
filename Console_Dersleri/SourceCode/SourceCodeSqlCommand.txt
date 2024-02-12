@@ -1,0 +1,183 @@
+﻿            //Data Source = LAPTOP - BP17DNTF; Initial Catalog = DbVisit; Integrated Security = True; Encrypt = True; Trust Server Certificate=True
+
+            SqlConnection connection = new SqlConnection("Data Source = LAPTOP-BP17DNTF; Initial Catalog = DbVisit; Integrated Security = True; Encrypt = True; TrustServerCertificate=True");
+            
+            //Sorgu gönderilirken DataAdapter kullanılır. verilerin listelenmesi
+            void Listele()
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("Select * From TblPerson", connection);
+                //DataTable dt = new DataTable();
+                //adapter.Fill(dt);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    Console.WriteLine(reader[0] + " | " + reader[1] + " | " + reader[2]);
+                    Console.WriteLine("------------------------------------------");
+                }
+
+                connection.Close();
+            }
+
+            //Ekleme işlemi
+
+            void Ekleme(string p1, string p2)
+            {
+                connection.Open();
+
+                SqlCommand command2 = new SqlCommand("Insert into TblPerson(Name,City) values (@p1,@p2)", connection);
+                command2.Parameters.AddWithValue("@p1", p1);
+                command2.Parameters.AddWithValue("@p2", p2);
+                command2.ExecuteNonQuery();
+
+                connection.Close();
+            }
+
+            // Silme işlemi
+            void Silme(int p1)
+            {
+                connection.Open();
+
+                SqlCommand command3 = new SqlCommand("Delete from TblPerson where Id = @p1", connection);
+                command3.Parameters.AddWithValue("@p1", p1);
+                command3.ExecuteNonQuery();
+
+                connection.Close();
+            }
+
+            //Ekleme("Mesut Kaya", "Elazığ");
+            //Silme(8);
+
+            //Güncelleme İşlemi
+
+            void Guncelle(string p1, string p2, int p3)
+            {
+                connection.Open();
+
+                SqlCommand command4 = new SqlCommand("Update TblPerson set Name = @p1, City = @p2 where Id = @p3", connection);
+                command4.Parameters.AddWithValue("@p1", p1);
+                command4.Parameters.AddWithValue("@p2", p2);
+                command4.Parameters.AddWithValue("@p3", p3);
+                command4.ExecuteNonQuery();
+
+                connection.Close();
+            }
+
+            //*******Konsoldan Kişi Ekleme********
+
+
+            //Console.WriteLine("************");
+            //Console.WriteLine();
+            //Console.Write("Kişi Adı:");
+            //string Name, City;
+            //Name = Console.ReadLine();
+            //Console.Write("Şehir Giriniz:");
+            //City = Console.ReadLine();
+            //Console.WriteLine();
+            //Console.WriteLine("************");
+
+            //Ekleme(Name, City);
+            //Listele();
+
+            //Console.WriteLine();
+            //Console.WriteLine("Kişi Sisteme Başarılı şekilde eklenmiştir.");
+            //Console.ReadLine();
+
+            //*******Konsoldan Kişi Ekleme********
+
+            //Arama İşlemi
+            void SearchCity(string p1)
+            {
+                connection.Open();
+                SqlCommand command5 = new SqlCommand("Select * From TblPerson where City = @p1", connection);
+                command5.Parameters.AddWithValue("@p1", p1);
+                SqlDataReader rdr = command5.ExecuteReader();
+                while (rdr.Read())
+                {
+                    Console.WriteLine(rdr[0] + " | " + rdr[1] + " | " + rdr[2]);
+                    Console.WriteLine("------------------------------------------");
+                }
+
+                connection.Close();
+            }
+
+            //SearchCity("Ankara");
+
+
+            //******* İstatistik ********
+
+            //connection.Open();
+
+            //SqlCommand command6 = new SqlCommand("Select count(*) from TblPerson",connection);
+            //SqlDataReader rdr2 = command6.ExecuteReader();
+            //while (rdr2.Read()) 
+            //{
+            //    Console.WriteLine("Toplam Personel Sayısı: " + rdr2[0]);
+            //    Console.WriteLine("------------------------------------------");
+
+            //}
+
+            //connection.Close();
+
+            //connection.Open();
+
+            //SqlCommand command7 = new SqlCommand("Select avg(Price) from TblFlight", connection);
+            //SqlDataReader rdr3 = command7.ExecuteReader();
+            //while (rdr3.Read())
+            //{
+            //    Console.WriteLine("Ortalama uçuş fiyatı: " + rdr3[0]);
+            //    Console.WriteLine("------------------------------------------");
+
+            //}
+            //connection.Close();
+
+            //******* İstatistik ********
+
+
+
+            //******* Group by ********
+
+            //connection.Open();
+
+
+            //SqlCommand command8 = new SqlCommand("select City,Count(*) from TblPerson group by city",connection);
+            //SqlDataReader rdr4 = command8.ExecuteReader();
+            //while (rdr4.Read())
+            //{
+            //    Console.WriteLine(rdr4[0] + " | " + rdr4[1]);
+            //    Console.WriteLine("------------------------------------------");
+            //}
+
+
+            //connection.Close();
+
+            //******* Group by ********
+
+
+            //******* İnner Join ********
+
+            connection.Open();
+
+
+            //SqlCommand command9 = new SqlCommand("select TF.Id, TC2.CountryName AS DepartureLocation, TC.CountryName AS ArrivalLocation, TF.Price, TF.Capacity, TF.FlightDate " +
+            //                                     "from TblFlight TF " +
+            //                                     "Inner Join TblCountry TC2 ON TC2.Id = TF.DepartureLocation " +
+            //                                     "Inner Join TblCountry TC on TC.Id = TF.ArrivalLocation",connection);
+
+            SqlCommand command9 = new SqlCommand("select * from FlightDetails", connection);
+            SqlDataReader rdr5 = command9.ExecuteReader();
+            while (rdr5.Read())
+            {
+                Console.WriteLine(rdr5[0] + " | " + rdr5[1] + " | " + rdr5[2] + " | " + rdr5[3] + " | " + rdr5[4] + " | " + rdr5[5]);
+                Console.WriteLine("------------------------------------------");
+            }
+
+
+            connection.Close();
+
+
+            Console.ReadLine();
+
+            //******* İnner Join ********
+

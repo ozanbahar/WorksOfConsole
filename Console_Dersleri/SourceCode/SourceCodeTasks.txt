@@ -1,0 +1,20 @@
+﻿            //string number;
+            //Console.Write("Rakamlarını Toplatmak isteğiniz bir sayı giriniz:");
+            //number = Console.ReadLine();
+
+            //if (int.TryParse(number, out int sayi))
+            //{
+            //    int toplam = 0;
+
+            //    foreach (char n in number)
+            //    {
+            //        int rakam = (int)Char.GetNumericValue(n);
+            //        toplam += rakam;
+            //    }
+
+            //    Console.WriteLine(toplam);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Geçersiz değer girdiniz. Sayi giriniz!!!");
+            //}

@@ -1,0 +1,33 @@
+﻿            // Metotlar
+            
+            //Geriye değer döndüren metotlar
+            //Geriye değer döndürmeyen metotlar
+
+            //kod tekrarının önüne geçmek
+
+            void yazdir()
+            {
+                Console.WriteLine("hoşgeldiniz.");
+            }
+            yazdir();
+
+
+            //22.Ders ödev
+            void ogrenci(string ad,string soyad,int s1,int s2,int s3)
+            {
+                double ortalama = (s1 + s2 + s3) / 3;
+                Console.WriteLine(ad + " " + soyad + " ortalaması: " + ortalama);
+            }
+
+            ogrenci("ozan", "bahar", 100, 85, 50);
+
+
+            //Geriye değer döndüren metotlar
+            int topla()
+            {
+                int s1 = 47;
+                int s2 = 35;
+                int sonuc = s1 + s2;
+                return sonuc;
+            }
+            Console.WriteLine(topla());

@@ -1,0 +1,154 @@
+﻿            //Console.Write("Merhaba Dünya");
+
+            //Console.WriteLine("Mesleğim yazılım mühendisi");
+
+            //Console.WriteLine("Kişi tanım kartı");
+            //Console.WriteLine();
+            //Console.WriteLine("Adınız: Ozan");
+            //Console.WriteLine("Soyadınız: Bahar");
+            //Console.WriteLine("Meslek: Endüstri Mühendisi");
+
+            //Değişkenler
+            //Bellek --> Ram geçici bellek
+            //Sayısal, Alfabetik Lojik veriler, karakter..
+
+            //string city;
+            //city = "Vice City";
+
+            //Console.WriteLine("Sehir: " + city);
+
+
+
+            //int n1, n2, total;
+
+            //n1 = 10;
+            //n2 = 20;
+            //total = n1 + n2;    
+
+            //Console.WriteLine(total);
+
+
+            //Console.WriteLine("Lütfen adınızı yazınız:");
+            //string ad;
+            //ad = Console.ReadLine();
+
+            //Console.WriteLine("Hoşgeldiniz.." + ad);
+
+
+            //int sayi;
+            //Console.WriteLine("Sayıyı Girin:");
+            //sayi = Convert.ToInt32(Console.ReadLine());
+
+            //Console.WriteLine(sayi);
+            //// Kod kısmında nokta console ekranında virgül
+
+            ////char değişkenler
+
+            //char sehir;
+
+            //sehir = 'A';// Tek tırnak ve tek harf alır.!!!
+            //Console.WriteLine(sehir);
+
+            ////Karar yapıları
+            ////if else
+
+
+            ////şifre kontrolü
+            //string input, password;
+
+            //Console.Write("Lütfen Şifreyi Giriniz: ");
+
+            //input = Console.ReadLine();
+            //password = "123";
+
+            //if (input == password)
+            //{
+            //    Console.Write("You entered the password correctly..'");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Wrong Password..");
+            //}
+
+
+            //string fruit;
+            //Console.Write("Enter your Fruit:");
+            //fruit = Console.ReadLine();
+            //switch (fruit)
+            //{
+            //    case "apple":Console.Write("Elma");break;
+            //    case "orange":Console.Write("Portakal");break;
+            //}
+
+            //for (int i = 1; i <= 10 ; i+=3)
+            //{
+            //    Console.WriteLine(i);
+            //}
+
+
+            //int number, sonuc;
+            //Console.Write("Lütfen faktöriyeli alınması istediğiniz sayıyı giriniz..");
+            //number = Convert.ToInt32(Console.ReadLine());
+            //sonuc = 1;
+
+            //for (int i = 1; i < number + 1; i++)
+            //{
+            //    sonuc = i * sonuc; 
+            //}
+
+            //Console.WriteLine("Sonuç: " + sonuc);
+
+
+
+            //17.Ders Ödev
+            //int toplam, number;
+            //Console.Write("Lütfen aralık belirlemek için bir sayı giriniz: ");
+            //number = Convert.ToInt32(Console.ReadLine());
+            //toplam = 0;
+
+            //for (int i = 1; i <= number; i++)
+            //{
+            //    if (i % 7 == 0)
+            //    {
+            //        Console.WriteLine(i);
+            //        toplam += i;
+            //    }
+            //}
+
+            //Console.WriteLine("Toplam: " + toplam);
+
+
+
+            //Diziler
+            //string[] sehirler = { "Adana", "İstanbul", "Gaziantep" };
+
+            //for (int i = 0; i < sehirler.Length; i++) 
+            //{
+            //    Console.WriteLine(sehirler[i]);            
+            //}
+
+            //Foreach
+            //DeğişkenTürü Değişkenİsmi in DiziAdi
+
+            //string[] sehirler = { "Adana", "İstanbul", "Gaziantep" };
+
+            //foreach (string s in sehirler) 
+            //{
+            //    Console.WriteLine(s);
+            //}
+
+
+            //20.Ders Ödev
+            //string number;
+            //Console.Write("Rakamlarını Toplatmak isteğiniz bir sayı giriniz:");
+            //number = Console.ReadLine();
+
+            //int toplam = 0;
+
+            //foreach (char n in number)
+            //{
+            //    int rakam = (int)Char.GetNumericValue(n);
+            //    toplam += rakam;
+            //}
+
+            //Console.WriteLine(toplam);
